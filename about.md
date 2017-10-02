@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Number hobbyist 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Here I will be posting stuff regarding football and numbers. Send me a mail or find me on Twitter if you would like to get in touch with me for whatever reason.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[electronic@mail](mailto:amnkarling at google mail)
