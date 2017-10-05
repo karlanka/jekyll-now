@@ -12,7 +12,7 @@ EDDAHRI GOAL
 
 A fairly simple expected goal-model using angle towards goal and distance to the goal line assigns Paulinho's one-on-one with the goalkeeper an xG-value of 14 %. Eddahri's skilful, or lucky if you want, goal is rated having 17 % chance of being a goal by the same model. A more sophisticated model incorporating further features such as assist type and if it's a direct shot or not would likely increase the xG of the first goal and decrease the value of the second to some extent. But any model that doesn't include defensive values would have a hard time correctly judge how good these two chances are.
 
-While I was almost done writing the code [@EightyFivePoints](https://twitter.com/EightyFivePoint) posted [something](http://eightyfivepoints.blogspot.co.uk/2017/09/bodies-on-line-quantifying-how.html) that was very similar to what I was doing.While this was a bit of a downer it at the same time it proved that my approach was not that daft and I choose to post this even though it might look like straight up copying.
+While I was almost done writing the code [@EightyFivePoints](https://twitter.com/EightyFivePoint) posted [something](http://eightyfivepoints.blogspot.co.uk/2017/09/bodies-on-line-quantifying-how.html) that was very similar to what I was doing. While this was a bit of a downer it at the same time proved that my approach was not that daft and I choose to post this even though it might look like straight up copying.
 
 ### Code
 For those interested I have published the repo with the code for this post on my [github-profile](https://github.com/karlanka/). Most of the code live inside this [Notebook](https://github.com/karlanka).
