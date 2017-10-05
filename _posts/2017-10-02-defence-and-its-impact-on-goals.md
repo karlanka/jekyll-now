@@ -15,14 +15,14 @@ A fairly simple expected goal-model using angle towards goal and distance to the
 While I was almost done writing the code [@EightyFivePoints](https://twitter.com/EightyFivePoint) posted [something](http://eightyfivepoints.blogspot.co.uk/2017/09/bodies-on-line-quantifying-how.html) that was very similar to what I was doing. While this was a bit of a downer it at the same time proved that my approach was not that daft and I choose to post this even though it might look like straight up copying.
 
 ### Code
-For those interested I have published the repo with the code for this post on my [github-profile](https://github.com/karlanka/). Most of the code live inside this [Notebook](https://github.com/karlanka).
+For those interested I have published the repo with the code for this post on my [github-profile](https://github.com/karlanka/). Most of the code live inside this [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb).
 
 ### Data
 [Stratagem Technologies](http://www.stratagem.co) have supplied data for this project. It includes all open play shots finished with either foot from the top tiers of Turkey, Switzerland, Sweden, Greece, Netherlands, Austria, Australia, Norway, Scotland as well as the second tiers of Germany and England.
 
 This data includes, apart from coordinates, defensive pressure and number of defensive players between the finish and goal. A definition of defensive pressure can be found in the notebook. Number of defensive players is rather self-explanatory - a one-on-one with the goalkeeper (or any other of the opposition's players) is putting this number at 1 (Paulinho's goal above). Eddahri's goal above have this number at 2.
 
-Angle towards goal and distance to the goal line between the posts are calculated from the coordinates. It is combinations of these four features that is used for the models. The Notebook includes a more thorough analysis of the features.
+Angle towards goal and distance to the goal line between the posts are calculated from the coordinates. It is combinations of these four features that is used for the models. The [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb) includes a more thorough analysis of the features.
 
 ### Does a model with defensive features perform better than one without?
 There is no correct way to evaluate the performance of a Logistic Regression model as it depends on what one is trying to achieve. However, Garry Gelade has a good explanation of why AUC is a useful metric in an xG-context. RMSE is easy to interpret and also works well when comparing multiple models using the same data.
@@ -50,10 +50,22 @@ The model using all four features scored best in both AUC and RMSE. This is evid
 
 Comparing the model using all features with the basic model it is apparent that the probabilities are more evenly spread for the former while the sums are basically the same. This is both expected and desirable.
 
+![alt text][logo]
+
+[logo]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_density%20curves.png "density curve"
+
 ### To what extent is the defensive features changing xG?
-Model coefficients can be found in the Notebook but instead of going further on about these imagine a shot being taken right in front of the goal at the line of the penalty area. The chart below illustrates how it would vary if defensive features were taken into consideration:
+Model coefficients can be found in the [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb) but instead of going further on about these imagine a shot being taken right in front of the goal at the line of the penalty area. The chart below illustrates how it would vary if defensive features were taken into consideration:
+
+![alt text][logo]
+
+[logo]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_change.png "xG vary"
 
 With no defensive pressure and no players there is according to the model 30 % chance of being a goal.  With 3 in defensive pressure and 2 players between the ball and goal the probability has decreased to 10 % - which is the same as the basic model would assign this shot.
+
+![alt text][logo]
+
+[logo]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_thresholds.png "xG thresholds"
 
 Another way to illustrate the impact of defensive features is plotting xG-thresholds on a pitch as below.
 The innermost ring represents where inside a shot has to be taken to have an xG-value of 10 % or more if the number of defensive players are 6 and the defensive pressure at 4. The outermost ring has the same xG-value but with 1 defensive player and 1 in defensive pressure. The 0 defensive pressure and 0 number of defensive player’s threshold would be somewhere on the other half of the pitch. The dashed line represents the 10 % xG-threshold of the basic model.
