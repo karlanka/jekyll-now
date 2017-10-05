@@ -27,10 +27,28 @@ Angle towards goal and distance to the goal line between the posts are calculate
 ### Does a model with defensive features perform better than one without?
 There is no correct way to evaluate the performance of a Logistic Regression model as it depends on what one is trying to achieve. However, Garry Gelade has a good explanation of why AUC is a useful metric in an xG-context. RMSE is easy to interpret and also works well when comparing multiple models using the same data.
 
-TABLE
+|Features|AUC| RMSE|
+| ---|---:| ---:|
+| an | 0.772 | 0.3 |
+| an, di | 0.765 | 0.299 |
+| an, di, de | 0.763 | 0.297 |
+| an, di, de, nu | 0.76 | 0.293 |
+| an, di, nu | 0.757 | 0.295 |
+| di, de | 0.755 | 0.299 |
+| an, nu | 0.751 | 0.295 |
+| an, de, nu | 0.751 | 0.294 |
+| di, de, nu | 0.75 | 0.296 |
+| di | 0.749 | 0.302 |
+| an, de | 0.749 | 0.298 |
+| di, nu | 0.746 | 0.298 |
+| de, nu | 0.694 | 0.303 |
+| nu | 0.691 | 0.304 |
+| de | 0.555 | 0.317 |
+
 
 The model using all four features scored best in both AUC and RMSE. This is evidence enough to say that Defensive Pressure and Number of Defensive Players Between the Ball and Goal has an impact on the probability of scoring. I would be lying if saying I am surprised by this though. However, I find it interesting that the differences between the models are rather small apart from when just using defensive pressure.
-Comparing the all features model with the basic model it is apparent that the probabilities are more evenly spread for the former while the sums are basically the same. This is both expected and desirable.
+
+Comparing the model using all features with the basic model it is apparent that the probabilities are more evenly spread for the former while the sums are basically the same. This is both expected and desirable.
 
 ### To what extent is the defensive features changing xG?
 Model coefficients can be found in the Notebook but instead of going further on about these imagine a shot being taken right in front of the goal at the line of the penalty area. The chart below illustrates how it would vary if defensive features were taken into consideration:
