@@ -50,22 +50,22 @@ The model using all four features scored best in both AUC and RMSE. This is evid
 
 Comparing the model using all features with the basic model it is apparent that the probabilities are more evenly spread for the former while the sums are basically the same. This is both expected and desirable.
 
-![alt text][logo]
+![alt text][densitycurve]
 
-[logo]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_density%20curves.png "density curve"
+[densitycurve]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_density%20curves.png "density curve"
 
 ### To what extent is the defensive features changing xG?
 Model coefficients can be found in the [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb) but instead of going further on about these imagine a shot being taken right in front of the goal at the line of the penalty area. The chart below illustrates how it would vary if defensive features were taken into consideration:
 
-![alt text][logo]
+![alt text][xgvary]
 
-[logo]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_change.png "xG vary"
+[xgvary]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_change.png "xG vary"
 
 With no defensive pressure and no players there is according to the model 30 % chance of being a goal.  With 3 in defensive pressure and 2 players between the ball and goal the probability has decreased to 10 % - which is the same as the basic model would assign this shot.
 
-![alt text][logo]
+![alt text][thresholds]
 
-[logo]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_thresholds.png "xG thresholds"
+[thresholds]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_thresholds.png "xG thresholds"
 
 Another way to illustrate the impact of defensive features is plotting xG-thresholds on a pitch as below.
 The innermost ring represents where inside a shot has to be taken to have an xG-value of 10 % or more if the number of defensive players are 6 and the defensive pressure at 4. The outermost ring has the same xG-value but with 1 defensive player and 1 in defensive pressure. The 0 defensive pressure and 0 number of defensive player’s threshold would be somewhere on the other half of the pitch. The dashed line represents the 10 % xG-threshold of the basic model.
