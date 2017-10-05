@@ -63,11 +63,12 @@ Model coefficients can be found in the [Notebook](https://github.com/karlanka/st
 
 With no defensive pressure and no players there is according to the model 30 % chance of being a goal.  With 3 in defensive pressure and 2 players between the ball and goal the probability has decreased to 10 % - which is the same as the basic model would assign this shot.
 
+Another way to illustrate the impact of defensive features is plotting xG-thresholds on a pitch as below.
+
 ![alt text][thresholds]
 
 [thresholds]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_thresholds.png "xG thresholds"
 
-Another way to illustrate the impact of defensive features is plotting xG-thresholds on a pitch as below.
 The innermost ring represents where inside a shot has to be taken to have an xG-value of 10 % or more if the number of defensive players are 6 and the defensive pressure at 4. The outermost ring has the same xG-value but with 1 defensive player and 1 in defensive pressure. The 0 defensive pressure and 0 number of defensive player’s threshold would be somewhere on the other half of the pitch. The dashed line represents the 10 % xG-threshold of the basic model.
 
 ### Summary
