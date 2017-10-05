@@ -27,8 +27,8 @@ Angle towards goal and distance to the goal line between the posts are calculate
 ### Does a model with defensive features perform better than one without?
 There is no correct way to evaluate the performance of a Logistic Regression model as it depends on what one is trying to achieve. However, Garry Gelade has a good explanation of why AUC is a useful metric in an xG-context. RMSE is easy to interpret and also works well when comparing multiple models using the same data.
 
-|Features|AUC| RMSE|
-| ---|---:| ---:|
+|Features |AUC  |RMSE  |
+|-----|-----:|-----:|
 | an | 0.772 | 0.3 |
 | an, di | 0.765 | 0.299 |
 | an, di, de | 0.763 | 0.297 |
@@ -59,7 +59,7 @@ Another way to illustrate the impact of defensive features is plotting xG-thresh
 The innermost ring represents where inside a shot has to be taken to have an xG-value of 10 % or more if the number of defensive players are 6 and the defensive pressure at 4. The outermost ring has the same xG-value but with 1 defensive player and 1 in defensive pressure. The 0 defensive pressure and 0 number of defensive player’s threshold would be somewhere on the other half of the pitch. The dashed line represents the 10 % xG-threshold of the basic model.
 
 ### Summary
-Let’s finish with going back to the case study. The basic model gave Paulinho 14 % chance of scoring – with the defensive features this has increased to 29 %. Eddahri’s goal saw its xG decrease from 17% to 13%. Even though both shots are ending up in goal I would say that a model that rates the former´s chance as better does a better job than one that does the opposite. This alone is somewhat sloppy argumentation but I would argue that everything above together points towards that a model that takes the defence into consideration is better than one which doesn’t.
+Let’s finish with going back to the case study. The basic model gave Paulinho 14 % chance of scoring – with the defensive features this has increased to 29 %. Eddahri's goal saw its xG decrease from 17% to 13%. Even though both shots are ending up in goal I would say that a model that rates the former´s chance as better does a better job than one that does the opposite. This alone is somewhat sloppy argumentation but I would argue that everything above together points towards that a model that takes the defence into consideration is better than one which doesn’t.
 
 If you have come this far I would like to thank you for reading. If you have any feedback, I would very much appreciate to hear this – you can find me on [Twitter](https://twitter.com/evilspacelord). Also a big thanks to [Stratagem](http://www.stratagem.co) for supplying me with the data.
 
