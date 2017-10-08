@@ -1,14 +1,14 @@
 ---
 layout: post
-title: The impact of defending on scoring goals
+title: Defence and its impact on goals
 ---
 ## Intro
 In this first post of mine I will try to show what impact defenders have on the chance of a goal being scored. If you read this, you almost certainly know what expected goals are. If not [@11tegen11](https://twitter.com/11tegen11) explains it well here. Rather than just performing some sort of correlation test and draw conclusions from that I build a bunch of expected goal-models using logistic regression with different combinations of predictors or features.
  
-Let's start with a case study:
+Let's begin with two examples:
 
-PAULINHO GOAL
-EDDAHRI GOAL
+![](https://github.com/karlanka/karlanka.github.io/blob/master/images/Paulinho%20defpressure%200.gif?raw=true)
+![](https://github.com/karlanka/karlanka.github.io/blob/master/images/eddahri%20defpressure%204.gif?raw=true)
 
 A fairly simple expected goal-model using angle towards goal and distance to the goal line assigns Paulinho's one-on-one with the goalkeeper an xG-value of 14 %. Eddahri's skilful, or lucky if you want, goal is rated having 17 % chance of being a goal by the same model. A more sophisticated model incorporating further features such as assist type and if it's a direct shot or not would likely increase the xG of the first goal and decrease the value of the second to some extent. But any model that doesn't include defensive values would have a hard time correctly judge how good these two chances are.
 
