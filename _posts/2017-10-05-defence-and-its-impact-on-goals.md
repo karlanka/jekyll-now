@@ -20,7 +20,7 @@ For those interested I have published the repo with the code for this post on my
 ### Data
 [Stratagem Technologies](http://www.stratagem.co) have supplied data for this project. It includes all open play shots finished with either foot from the top tiers of Turkey, Switzerland, Sweden, Greece, Netherlands, Austria, Australia, Norway, Scotland as well as the second tiers of Germany and England.
 
-This data includes, apart from coordinates, defensive pressure and number of defensive players between the finish and goal. A definition of defensive pressure can be found in the notebook. Number of defensive players is rather self-explanatory - a one-on-one with the goalkeeper (or any other of the opposition's players) is putting this number at 1 (Paulinho's goal above). Eddahri's goal above have this number at 2.
+This data includes, apart from coordinates, defensive pressure and number of defensive players between the finish and goal. A definition of defensive pressure can be found in the [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb). Number of defensive players is rather self-explanatory - a one-on-one with the goalkeeper (or any other of the opposition's players) puts this number at 1 (Paulinho's goal above). Eddahri's goal above have it at 2.
 
 Angle towards goal and distance to the goal line between the posts are calculated from the coordinates. It is combinations of these four features that is used for the models. The [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb) includes a more thorough analysis of the features.
 
@@ -46,7 +46,7 @@ There is no correct way to evaluate the performance of a Logistic Regression mod
 | de | 0.555 | 0.317 |
 
 
-The model using all four features scored best in both AUC and RMSE. This is evidence enough to say that Defensive Pressure and Number of Defensive Players Between the Ball and Goal has an impact on the probability of scoring. I would be lying if saying I am surprised by this though. However, I find it interesting that the differences between the models are rather small apart from when just using defensive pressure.
+The model using all four features scored best in both AUC and RMSE. This is evidence enough to say that *Defensive Pressure* and *Number of Defensive Players Between the Ball and Goal* has an impact on the probability of scoring. I would be lying if saying I am surprised by this though. However, I find it interesting that the differences between the models are rather small apart from when just using defensive pressure. Some of the models in top could likely change positions with each using a different set of test data.
 
 Comparing the model using all features with the basic model it is apparent that the probabilities are more evenly spread for the former while the sums are basically the same. This is both expected and desirable.
 
@@ -69,10 +69,10 @@ Another way to illustrate the impact of defensive features is plotting xG-thresh
 
 [thresholds]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_thresholds.png "xG thresholds"
 
-The innermost ring represents where inside a shot has to be taken to have an xG-value of 10 % or more if the number of defensive players are 6 and the defensive pressure at 4. The outermost ring has the same xG-value but with 1 defensive player and 1 in defensive pressure. The 0 defensive pressure and 0 number of defensive player’s threshold would be somewhere on the other half of the pitch. The dashed line represents the 10 % xG-threshold of the basic model.
+The innermost ring represents where inside a shot has to be taken to have an xG-value of 10 % or more if the number of defensive players are 6 and the defensive pressure is at 4. The outermost ring has the same xG-value but with 1 defensive player and 1 in defensive pressure. The 0 defensive pressure and 0 number of defensive player’s threshold would be somewhere on the other half of the pitch. The dashed line represents the 10 % xG-threshold of the basic model.
 
 ### Summary
-Let’s finish with going back to the case study. The basic model gave Paulinho 14 % chance of scoring – with the defensive features this has increased to 29 %. Eddahri's goal saw its xG decrease from 17% to 13%. Even though both shots are ending up in goal I would say that a model that rates the former´s chance as better does a better job than one that does the opposite. This alone is somewhat sloppy argumentation but I would argue that everything above together points towards that a model that takes the defence into consideration is better than one which doesn’t.
+Let’s finish with going back to the examples. The basic model gave Paulinho 14 % chance of scoring – with the defensive features this has increased to 29 %. Eddahri's goal saw its xG decrease from 17% to 13%. Even though both shots are ending up in goal I would say that a model that rates the former's chance as better does a better job than one that does the opposite. This alone is somewhat sloppy argumentation but I would argue that everything above together points towards that a model that takes the defence into consideration is better than one which doesn’t.
 
 If you have come this far I would like to thank you for reading. If you have any feedback, I would very much appreciate to hear this – you can find me on [Twitter](https://twitter.com/evilspacelord). Also a big thanks to [Stratagem](http://www.stratagem.co) for supplying me with the data.
 
