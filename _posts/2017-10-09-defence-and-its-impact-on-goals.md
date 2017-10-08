@@ -28,7 +28,7 @@ Angle towards goal and distance to the goal line between the posts are calculate
 There is no correct way to evaluate the performance of a Logistic Regression model as it depends on what one is trying to achieve. However, [AUC](http://www.dataschool.io/roc-curves-and-auc-explained/) is useful in cases with unbalanced data and will always be a number between 0.5 (useless) and 1 (perfect). RMSE is easy to interpret and also works well when comparing multiple models using the same data.
 
 |Features   |AUC  |RMSE  |
-|------:|------:|------:|
+|------|------|------|
 | an, di, de, nu | 0.784 | 0.292 |
 | an, de, nu | 0.784 | 0.292 |
 | an, nu | 0.778 | 0.293 |
