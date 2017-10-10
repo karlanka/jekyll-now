@@ -54,12 +54,12 @@ Comparing the model using all features with the basic model it is apparent that 
 
 [densitycurve]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_density%20curves.png "density curve"
 
-### To what extent are the defensive features changing xG?
+### How is xG varying with defensive features?
 Model coefficients can be found in the [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb) but instead of going further on about these imagine a shot being taken right in front of the goal at the line of the penalty area. The chart below illustrates how the chance of this shot being a goal would vary if defensive features were taken into consideration:
 
 ![alt text][xgvary]
 
-[xgvary]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_change.png "xG vary"
+[xgvary]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_change_logo.png "xG vary"
 
 With no defensive pressure and no players there is according to the model 30 % chance of being a goal.  With 3 in defensive pressure and 2 players between the ball and goal the probability has decreased to 10 % - which is the same as the basic model would assign this shot.
 
