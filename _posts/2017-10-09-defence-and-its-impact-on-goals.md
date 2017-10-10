@@ -61,7 +61,7 @@ Model coefficients can be found in the [Notebook](https://github.com/karlanka/st
 
 [xgvary]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_change_logo.png "xG vary"
 
-With no defensive pressure and no players there is according to the model 30 % chance of being a goal.  With 3 in defensive pressure and 2 players between the ball and goal the probability has decreased to 10 % - which is the same as the basic model would assign this shot.
+With no defensive pressure and no players there is according to the model 28 % chance of being a goal.  With 3 in defensive pressure and 2 players between the ball and goal the probability has decreased to 10 % - which is the same as the basic model would assign this shot.
 
 Another way to illustrate the impact of defensive features is plotting xG-thresholds on a pitch as below.
 
