@@ -3,7 +3,7 @@ layout: post
 title: Defence and its impact on goals
 ---
 ## Intro 
-In this first post of mine I will try to show what impact defenders have on the chance of a goal being scored. If you read this, you almost certainly know what expected goals are. If not [@11tegen11](https://twitter.com/11tegen11) explains it well here. Rather than just performing some sort of correlation test and draw conclusions from that I build a bunch of expected goal-models using logistic regression with different combinations of predictors or features.
+In this first post of mine I will try to show what impact defenders have on the chance of a goal being scored. If you read this, you almost certainly know what expected goals are. If not [@11tegen11](https://twitter.com/11tegen11) explains it well [here](http://11tegen11.net/2015/08/14/a-close-look-at-my-new-expected-goals-model/). Rather than just performing some sort of correlation test and draw conclusions from that I build a bunch of expected goal-models using logistic regression with different combinations of predictors or features.
  
 Let's begin with two examples.
 
