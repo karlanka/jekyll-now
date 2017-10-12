@@ -15,14 +15,14 @@ A fairly simple expected goals-model using angle towards goal and distance to th
 While I was almost done writing the code [@EightyFivePoints](https://twitter.com/EightyFivePoint) posted [something](http://eightyfivepoints.blogspot.co.uk/2017/09/bodies-on-line-quantifying-how.html) that was very similar to what I was doing. While this was a bit of a downer it at the same time proved that my approach was not that daft and I choose to post this even though it might look like straight up copying.
 
 ### Code
-For those interested I have published the repo with the code for this post on my [github-profile](https://github.com/karlanka/). Most of the code live inside this [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb).
+I will likely publish some code used for this project later on my github-profile. Until then you can reach out to me on [Twitter](https://twitter.com/evilspacelord) if you have any questions about this.
 
 ### Data
 [Stratagem Technologies](http://www.stratagem.co) have supplied data for this project. It includes all open play shots finished with either foot from the top tiers of Turkey, Switzerland, Sweden, Greece, Netherlands, Austria, Australia, Norway, and Scotland as well as the second tiers of Germany and England.
 
-This data includes, apart from coordinates, defensive pressure and number of defensive players between the finish and goal. A definition of defensive pressure can be found in the [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb). Number of defensive players is rather self-explanatory - a one-on-one with the goalkeeper (or any other of the opposition's players) puts this number at 1 (Paulinho's goal above). Eddahri's goal above have it at 2.
+This data includes, apart from coordinates, defensive pressure and number of defensive players between the finish and goal. Number of defensive players is rather self-explanatory - a one-on-one with the goalkeeper (or any other of the opposition's players) puts this number at 1 (Paulinho's goal above). Eddahri's goal above have it at 2.
 
-Angle towards goal and distance to the goal line between the posts are calculated from the coordinates. It is combinations of these four features that is used for the models. The [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb) includes a more thorough analysis of the features.
+Angle towards goal and distance to the goal line between the posts are calculated from the coordinates. It is combinations of these four features that is used for the models. 
 
 ### Does a model with defensive features perform better than one without?
 There is no correct way to evaluate the performance of a Logistic Regression model as it depends on what one is trying to achieve. However, [AUC](http://www.dataschool.io/roc-curves-and-auc-explained/) is useful in cases with unbalanced data and will always be a number between 0.5 (useless) and 1 (perfect). RMSE is easy to interpret and also works well when comparing multiple models using the same data.
@@ -55,7 +55,7 @@ Comparing the model using all features with the basic model it is apparent that 
 [densitycurve]: https://raw.githubusercontent.com/karlanka/karlanka.github.io/master/images/xg_density%20curves.png "density curve"
 
 ### How is xG varying with defensive features?
-Model coefficients can be found in the [Notebook](https://github.com/karlanka/stratagem_projects/blob/master/defensive_features.ipynb) but instead of going further on about these imagine a shot being taken right in front of the goal at the line of the penalty area. The chart below illustrates how the chance of this shot being a goal would vary if defensive features were taken into consideration:
+Imagine a shot being taken right in front of the goal at the line of the penalty area. The chart below illustrates how the chance of this shot being a goal would vary if defensive features were taken into consideration:
 
 ![alt text][xgvary]
 
